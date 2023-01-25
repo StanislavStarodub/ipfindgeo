@@ -1,0 +1,9 @@
+{
+  "name": "geolocation",
+  "version": "1.0.0",
+  "description": "IP address tracker coding challenge",
+  "source": "index.html",
+  "keywords": [],
+  "author": "Stanislav Starodub",
+  "license": "ISC"
+}

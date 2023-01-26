@@ -7,6 +7,7 @@ const locationInfo = document.querySelector('#location');
 const timezoneInfo = document.querySelector('#timezone');
 const ispInfo = document.querySelector('#isp');
 const latInit = 50.908148, lngInit = 34.79907;
+const sizePopupText = '14px';
 
 btn.addEventListener('click', getData);
 ipInput.addEventListener('keydown', handleKey);
@@ -48,7 +49,7 @@ function onMapClick(e) {
       .setLatLng(e.latlng)
       .setContent("You clicked the map at <br />" + e.latlng.toString())
     .openOn(map);
-  popup.setContent()._wrapper.style.fontSize = '14px';
+  popup.setContent()._wrapper.style.fontSize = sizePopupText;
   let latlng = e.latlng;
   L.marker([e.latlng.lat, e.latlng.lng], { icon:  iconPath}).addTo(map)
 
@@ -57,6 +58,7 @@ function onMapClick(e) {
   map.on('click', onMapClick);
 
 let marker = L.marker([latInit, lngInit], { icon: markerIcon }).addTo(map).bindPopup("You are here now!").openPopup();
+marker._popup._wrapper.style.fontSize = sizePopupText;
 
 function setInfo(mapData) {
   const {lat, lng, country, region, timezone } = mapData.location;

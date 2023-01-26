@@ -57,7 +57,7 @@ function onMapClick(e) {
 
   map.on('click', onMapClick);
 
-let marker = L.marker([latInit, lngInit], { icon: markerIcon }).addTo(map).bindPopup("You are here now!").openPopup();
+let marker = L.marker([latInit, lngInit], { icon: markerIcon }).addTo(map).bindPopup("It's my native city - Sumy!").openPopup();
 marker._popup._wrapper.style.fontSize = sizePopupText;
 
 function setInfo(mapData) {
